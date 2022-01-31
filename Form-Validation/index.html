@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Built-in Validation Form</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <form>
+      <fieldset>
+        <legend>All information are required to be filled.</legend>
+        <div class="container1">
+          <p>Do you have NI number?</p>
+          <label for="r1">YES</label><input type="radio" id="r1" name="NINumber" value="YES" required>
+          <label for="r2">NO</label><input type="radio" id="r2" name="NINumber" value="NO" required>
+        </div>
+        <div class="container2">
+          <label for="fname">Enter First Name</label><br>
+          <input type="text" id="fname" name="fname" value="" required><br>
+          <label for="sname">Enter Sure Name</label><br>
+          <input type="text" id="sname" name="sname" value="" required><br>
+          <label for="gender">Select your Gender</label><br>
+          <input type="text" id="gender" name="gender" list="sex" pattern="[M]ale | [F]emale" required><br>
+          <datalist id="sex">
+            <option>Male</option>
+            <option>Female</option>
+          </datalist>
+          <label for="email">Enter E-mail Address</label><br>
+          <input type="text" id="email" name="email" value="" required><br>
+          <label for="number">Enter Mobile Number</label><br>
+          <input type="number" id="number" name="mbNumber" value="" required><br>
+          <label for="details">Write about you</label><br>
+          <textarea id="details" name="about" required></textarea>
+        </div>
+        <button type="submit" name="button">Submit</button>
+          <p id="greeting"></p>
+      </fieldset>
+    </form>
+
+  </body>
+</html>
